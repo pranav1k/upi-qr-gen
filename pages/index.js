@@ -74,7 +74,7 @@ export default function Home() {
               UPI QR Code Generator
             </h1>
             <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-lg mx-auto">
-              Generate scannable UPI QR codes instantly for Google Pay, PhonePe, Paytm, BHIM, and any UPI app.
+              Generate scannable UPI QR codes instantly for any UPI app.
             </p>
           </header>
 
