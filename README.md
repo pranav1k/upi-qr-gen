@@ -1,11 +1,11 @@
 # UPI QR Code Generator
 
-This is a simple qr code generator for a upi id. Doesnt store any info on any server, easy to use and easy to set up!
-Try it out on https://upi.prnvkk.me
+This is a simple qr code generator for a upi id. Fully local!
+Try it out on https://upi.pkk.in.eu.org
 
 ## Setup
 Just run
 ```
-npm install
-npm run dev
+bun install
+bun dev
 ```
