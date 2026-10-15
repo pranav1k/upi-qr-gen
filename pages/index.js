@@ -68,7 +68,6 @@ export default function Home() {
 
       <main className="min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-gray-100 flex flex-col justify-between py-6 px-4 sm:px-6 lg:px-8 transition-colors">
         <div className="max-w-4xl mx-auto w-full">
-          {/* Header */}
           <header className="text-center m-8">
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               UPI QR Code Generator
@@ -78,22 +77,18 @@ export default function Home() {
             </p>
           </header>
 
-          {/* Main Grid: Form & Preview */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Form Column */}
             <div className="lg:col-span-7 bg-white dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-sm p-6 sm:p-7">
               <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
                 Payment Details
               </h2>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                {/* UPI ID */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
                     <label htmlFor="upiId" className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300">
                       UPI ID (VPA) <span className="text-red-500">*</span>
                     </label>
-                    <span className="text-[11px] text-gray-600 dark:text-gray-400">e.g. name@okhdfcbank</span>
                   </div>
                   <input
                     id="upiId"
@@ -118,13 +113,11 @@ export default function Home() {
                   )}
                 </div>
 
-                {/* Payee Name */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
                     <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300">
                       Payee Name <span className="text-red-500">*</span>
                     </label>
-                    <span className="text-[11px] text-gray-600 dark:text-gray-400">Recipient or business name</span>
                   </div>
                   <input
                     id="name"
@@ -148,7 +141,6 @@ export default function Home() {
                   )}
                 </div>
 
-                {/* Amount (Optional) */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
                     <label htmlFor="amount" className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300">
@@ -185,7 +177,6 @@ export default function Home() {
                     </p>
                   )}
 
-                  {/* Quick Preset Buttons */}
                   <div className="mt-2 flex flex-wrap gap-1.5 items-center">
                     <span className="text-[11px] text-gray-600 dark:text-gray-400 mr-1">Quick:</span>
                     {PRESET_AMOUNTS.map((amt) => (
@@ -214,7 +205,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Transaction Note / Remarks (Optional) */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
                     <label htmlFor="note" className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300">
@@ -239,7 +229,6 @@ export default function Home() {
                   )}
                 </div>
 
-                {/* Advanced QR Options: Error Correction */}
                 <div className="pt-2">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-medium text-gray-600 dark:text-gray-400">
@@ -274,11 +263,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Form Buttons */}
                 <div className="pt-3 flex space-x-3">
                   <button
                     type="submit"
-                    className="flex-1 py-3 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:scale-[0.99] text-white font-semibold text-sm rounded-xl shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="flex-1 py-3 px-4 bg-blue-600 hover:bg-indigo-600 active:scale-[0.99] text-white font-semibold text-sm rounded-xl shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   >
                     Generate QR Code
                   </button>
@@ -294,7 +282,6 @@ export default function Home() {
               </form>
             </div>
 
-            {/* Preview Column */}
             <div className="lg:col-span-5 flex flex-col items-center">
               {data && upiUri ? (
                 <QrCodeDisplay
@@ -326,10 +313,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Footer */}
         <footer className="mt-12 text-center text-xs text-gray-600 dark:text-gray-400">
           <div className="flex items-center justify-center space-x-2 mb-1">
-            <span>100% Client-Side</span>
+            <span>100% Client-Side btw</span>
           </div>
         </footer>
       </main>
